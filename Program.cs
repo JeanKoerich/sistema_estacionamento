@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using VagasEstacionamento.Data;
+using VagasEstacionamento.Model;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +8,9 @@ var builder = WebApplication.CreateBuilder(args);
 var conexao = builder.Configuration.GetConnectionString("Postgres");
 
 builder.Services.AddDbContext<AppDbContext>(b => b.UseNpgsql(conexao));
+
+// Configuração do AutoMapper
+builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
