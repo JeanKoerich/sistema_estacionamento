@@ -13,6 +13,6 @@ O projeto trabalha com 5 entidades principais:
   - Cidade: Local onde os estacionamentos estão situados.
   - Estado:Estado correspondente à cidade.
   - Empresa: Empresa responsável pelo gerenciamento do estacionamento.
-  - 
+
 # DTO (Data Transfer Object)
 Para facilitar a comunicação entre o sistema e o cliente (API), o projeto utiliza DTOs que encapsulam os dados essenciais de cada entidade, evitando o acoplamento direto com as entidades do banco.
